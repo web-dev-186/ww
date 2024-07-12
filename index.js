@@ -5,6 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 
 require("./config/passport"); // Import passport configuration
 
@@ -73,6 +74,15 @@ app.use(
     },
   })
 );
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'front', 'dist')));
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back index.html.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'dist', 'index.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
