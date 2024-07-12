@@ -1,0 +1,161 @@
+/* Reset margin and padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure full width for the landing page */
+.landing-page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.services-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.services {
+  min-height: 100vh; /* Ensure the height matches the viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f2f5 25%, #1890ff 100%);
+  padding: 20px;
+
+  .services__description {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+
+    .ant-typography {
+      color: #fff; /* Ensure text color is white */
+    }
+  }
+
+  .services__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+
+  .ant-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ant-col {
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 300px;
+    margin: 10px;
+    border: 0 !important;
+    text-align: left;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+      .service-card__icon {
+        color: #1890ff;
+      }
+    }
+
+    .service-card__icon {
+      font-size: 40px;
+      color: #ff4d4f;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .service-card__content {
+      .service-card__title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .service-card__description {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .service-card {
+      width: calc(33.33% - 40px); /* Adjust card width for three columns */
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .service-card {
+      width: calc(50% - 40px); /* Adjust card width for two columns */
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .service-card {
+      width: calc(
+        100% - 40px
+      ); /* Adjust card width for full width on smaller screens */
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .service-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}
+.hospital-list-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.services-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}

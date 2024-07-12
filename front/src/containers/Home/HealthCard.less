@@ -1,0 +1,228 @@
+@import "../../styles/main.less";
+
+/* Home.less */
+
+.home__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -10px;
+}
+
+.home__img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.home {
+  position: relative;
+  background: @gradient-bg;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-top: 15vw solid transparent;
+    border-right: 1000vw solid white;
+    pointer-events: none;
+  }
+
+  .home__container {
+    padding-top: 10rem; /* Further reduce padding-top to move content higher */
+    margin-top: 0px;
+
+    .home__intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .intro__heading {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      .intro__sub-heading {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .intro__button-group {
+        margin-top: 1.5rem; /* Keep buttons close to the text */
+      }
+    }
+
+    .home__img-wrapper {
+      .flex-center();
+
+      .home__img {
+        width: 100%;
+        height: auto;
+        margin: 2.5rem auto 2rem auto;
+        z-index: 2;
+      }
+    }
+
+    .home__cards {
+      .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .health-card {
+        width: 320px;
+        height: 200px;
+        background: linear-gradient(135deg, #1e90ff, #00bfff);
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        color: #fff;
+        font-family: "Arial, sans-serif";
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .logo {
+            width: 30px;
+            height: 30px;
+          }
+
+          .person-icon {
+            font-size: 24px;
+          }
+        }
+
+        .card-details {
+          .card-number,
+          .member-number,
+          .issue-date,
+          .name {
+            margin: 5px 0;
+            font-size: 14px;
+          }
+
+          .name {
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+
+        .card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .issue-number,
+          .rank {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 5%;
+      bottom: 0;
+
+      width: 30vw;
+      height: 15vh;
+      background: @gradient-bg;
+      transform: skewY(-10deg);
+    }
+  }
+}
+.health-card {
+  width: 320px;
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #fff;
+  font-family: "Arial, sans-serif";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .india-flag {
+      width: 30px;
+      height: 20px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .person-icon {
+      font-size: 24px;
+    }
+  }
+
+  .card-details {
+    p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Push footer to the bottom */
+    font-size: 12px;
+
+    .medical-icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .footer-text {
+      flex: 1; /* Expand to fill remaining space */
+    }
+  }
+
+  .qr-code {
+    align-self: flex-end; /* Align QR code to the right */
+    margin-top: -70px; /* Adjust margin as needed */
+  }
+}

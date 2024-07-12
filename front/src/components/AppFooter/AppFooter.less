@@ -1,0 +1,94 @@
+@import "../../styles/main.less";
+
+.app-footer {
+  background-color: #4d98df; /* Dark background color */
+  padding: 2rem 0; /* Padding for the footer */
+  color: white; /* Text color for the footer */
+
+  .app-footer__content {
+    padding-bottom: 3rem; /* Bottom padding inside the footer content */
+    display: flex;
+    flex-wrap: wrap;
+
+    .app-footer__logo {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .app-footer__subscribe {
+      flex: 0 0 100%;
+
+      .app-footer__subscribe-title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .app-footer__subscribe-text {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .app-footer__subscribe-input {
+        width: 100%;
+        max-width: 300px; /* Limit width of input for better responsiveness */
+        margin-bottom: 1rem;
+
+        .ant-input {
+          background-color: lighten(@footer-color, 10%);
+          color: white;
+          border: none;
+          border-radius: 4px 0 0 4px;
+        }
+
+        .ant-input-group-addon {
+          background-color: lighten(@footer-color, 10%);
+          color: white;
+          border: none;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+
+  .app-footer__health-card-info {
+    color: white;
+    margin-top: 2rem;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .app-footer__copyright {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid lighten(@footer-color, 20%);
+    margin-top: 2rem;
+  }
+}

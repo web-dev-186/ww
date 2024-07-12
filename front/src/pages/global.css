@@ -1,0 +1,26 @@
+/* global.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.ant-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ant-layout-content {
+  flex: 1;
+}
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 60px 0;
+}

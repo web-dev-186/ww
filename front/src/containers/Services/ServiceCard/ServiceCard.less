@@ -1,0 +1,48 @@
+@import "../../../styles/main.less";
+
+.service-card {
+  width: 100% !important;
+  border: 0 !important;
+  text-align: left;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    .service-card__icon {
+      color: #1890ff;
+    }
+  }
+
+  .service-card__icon {
+    font-size: 40px;
+    color: #ff4d4f;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .service-card__content {
+    .service-card__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .service-card__description {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .service-card {
+    width: 100% !important;
+  }
+}

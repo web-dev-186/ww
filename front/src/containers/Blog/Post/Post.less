@@ -1,0 +1,33 @@
+@import "../../../styles/main.less";
+
+.post {
+  .card();
+  text-align: left;
+
+  .ant-card-meta-description {
+    font-size: 0.9rem;
+  }
+
+  .post__time-read {
+    color: @primary-color;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .post__info {
+    .flex-center();
+    justify-content: space-between;
+
+    color: @font-color;
+    padding: 0.75rem 1.5rem;
+
+    .anticon {
+      color: @primary-color;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
